@@ -1,49 +1,94 @@
-<h1>Customer Purchase Behavior Prediction</h1>
+# Customer Purchase Prediction
 
-<h2>Project Development Journal</h2>
+## Project Overview
+This project demonstrates the development of a machine learning classification system designed to predict whether a customer is likely to make a purchase. Using demographic and behavioral data, the system identifies patterns in customer behavior and evaluates multiple classification algorithms to select the most effective model.
 
-<h3><code style="color:blue">Problem Statement</code></h3>
-<strong>This project aims to predict customer purchase behavior using machine learning. We perform data preprocessing, feature engineering, model training, and evaluation to build an accurate prediction system, accessible via a Streamlit web app.</strong>
+The primary goal is to provide actionable insights into customer purchase behavior and build a predictive model that can aid in targeted marketing strategies.
 
-<h3><code style="color:blue">Dataset Description</code></h3>
-<strong>We are using the dataset from Kaggle: <a href="https://www.kaggle.com/datasets/rabieelkharoua/predict-customer-purchase-behavior-dataset">Predict Customer Purchase Behavior Dataset</a>. It contains customer features and purchase outcomes. The columns include:</strong>
-<ul>
-    <li><strong>CustomerID</strong>: Unique identifier for the customer.</li>
-    <li><strong>Age</strong>: Customer’s age.</li>
-    <li><strong>Gender</strong>: Customer’s gender.</li>
-    <li><strong>AnnualIncome</strong>: Customer’s annual income.</li>
-    <li><strong>SpendingScore</strong>: Customer’s spending score.</li>
-    <li><strong>PurchaseStatus</strong>: Target variable indicating whether the customer made a purchase (1) or not (0).</li>
-</ul>
+---
 
-<h3><code style="color:blue">Data Preprocessing</code></h3>
-<ul>
-    <li><strong>Handling Missing Values:</strong> Checked for NaNs and removed or imputed as necessary.</li>
-    <li><strong>Feature Scaling:</strong> Standardized numeric features using StandardScaler.</li>
-    <li><strong>Encoding:</strong> Categorical features like Gender were encoded to numeric values.</li>
-</ul>
+## Dataset
+The dataset used in this project is available on Kaggle: [Customer Purchase Behavior Dataset]([https://www.kaggle.com/datasets/your-dataset-link](https://www.kaggle.com/datasets/rabieelkharoua/predict-customer-purchase-behavior-dataset))  
 
-<h3><code style="color:blue">Exploratory Data Analysis (EDA)</code></h3>
-<p>We visualized the distribution of purchase behavior and relationships between features using countplots, heatmaps, and scatter plots.</p>
-<div align="center">
-    <img src="assets/eda_plot.png" height="300">
-</div>
+This dataset contains anonymized customer data and includes demographic and behavioral features for purchase prediction.
 
-<h3><code style="color:blue">Model Building</code></h3>
-<p>We trained several models including Logistic Regression, Decision Tree, K-Nearest Neighbors, and Random Forest. Hyperparameter tuning was performed for Random Forest using GridSearchCV.</p>
+---
 
-<h3><code style="color:blue">Model Evaluation</code></h3>
-<p>The best performing model was selected based on accuracy, classification report, and confusion matrix. Random Forest provided the highest accuracy.</p>
+**Features include:**
+- `Age` – Age of the customer  
+- `Gender` – Gender of the customer  
+- `Annual Income` – Yearly income of the customer  
+- `Number of Purchases` – Total purchases made  
+- `Product Category` – Category of products purchased  
+- `Time Spent on Website` – Average time spent browsing  
+- `Loyalty Program` – Whether the customer is enrolled  
+- `Discounts Availed` – Discounts the customer has used  
 
-<h3><code style="color:blue">Model Deployment</code></h3>
-<p>The trained model was deployed via a Streamlit web app. Users can input customer features to predict purchase probability.</p>
-<p>Check out the deployed app: <a href="https://huggingface.co/spaces/nelbarman053/Customer-Purchase-Behavior-Prediction">here</a>.</p>
-<div align="center">
-    <img src="assets/streamlit_app.png" height="400">
-</div>
+**Target Variable:**
+- `PurchaseStatus` (0 = No Purchase, 1 = Purchase)
 
-<h3><code style="color:blue">Observations</code></h3>
-<ul>
-    <li>The model can successfully differentiate between likely purchasers and non-purchasers.</li>
-    <li>Features like AnnualIncome, Age, and SpendingScore were most impactful for predictions.</li>
-</ul>
+---
+
+## Machine Learning Workflow
+
+### 1. Data Loading & Exploration
+- Loaded the dataset using **pandas**  
+- Examined the dataset’s shape, column types, and missing values  
+- Identified patterns and distributions  
+
+### 2. Exploratory Data Analysis (EDA)
+- Visualized the distribution of purchase vs no purchase
+- ![Purchase Distribution](images/purchase_distribution.png)
+- Created correlation heatmaps to identify feature relationships
+- ![Feature Correlation](images/feature_correlation.png)
+- Explored feature-to-feature interactions  
+
+### 3. Data Preprocessing
+- Handled missing values and encoded categorical features  
+- Scaled numeric features using `StandardScaler`  
+- Split dataset into training and testing sets (80/20)  
+
+### 4. Model Building
+Implemented multiple classification models and compared performance:  
+- Logistic Regression  
+- Decision Tree  
+- Random Forest (with hyperparameter tuning using GridSearchCV)  
+- K-Nearest Neighbors (KNN)  
+
+### 5. Model Evaluation
+- Evaluated models using the following metrics:  
+  - Accuracy  
+  - Precision  
+  - Recall  
+  - F1-Score  
+  - Confusion Matrix  
+
+### 6. Feature Importance
+- Identified key predictors using **Random Forest feature importance**  
+- Visualized contributions of each feature to model predictions  
+
+---
+
+## Results
+- **Random Forest** emerged as the best-performing model based on accuracy and other evaluation metrics.  
+- Most impactful features for predicting purchase behavior:  
+  - `Annual Income`  
+  - `Time Spent on Website`  
+  - `Number of Purchases`  
+
+These insights can guide business decisions for targeted promotions and customer engagement strategies.
+
+---
+
+## Technologies & Libraries
+- **Programming Language:** Python  
+- **Data Manipulation:** pandas, NumPy  
+- **Visualization:** Matplotlib, Seaborn  
+- **Machine Learning:** Scikit-learn  
+- **Model Persistence:** joblib  
+- **Deployment:** Streamlit  
+
+---
+## How to Access
+Visit the live Streamlit app at: [Customer-Purchase-Prediction]([https://share.streamlit.io/your-username/your-repo/main](https://customer-purchase-prediction-404.streamlit.app))
+
