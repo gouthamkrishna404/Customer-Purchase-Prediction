@@ -6,7 +6,7 @@ This project implements a supervised machine learning system to predict whether 
 The objective is to analyze customer behavior patterns, compare multiple classification algorithms, and identify the most effective model for purchase prediction.
 
 Dataset
-Customer Purchase Behavior Dataset
+[Customer Purchase Behavior Dataset](https://www.kaggle.com/datasets/rabieelkharoua/predict-customer-purchase-behavior-dataset)
 
 Features
 - Age  
