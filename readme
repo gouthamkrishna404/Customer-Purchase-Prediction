@@ -1,7 +1,7 @@
 Customer Purchase Prediction Using Machine Learning
 
 Project Overview
-This project implements a supervised machine learning system to predict whether a customer will make a purchase based on demographic and behavioral data.
+This project implements a supervised machine learning system to predict whether a customer will make a purchase based on behavioral data.
 
 The objective is to analyze customer behavior patterns, compare multiple classification algorithms, and identify the most effective model for purchase prediction.
 
