@@ -1,71 +1,60 @@
-Customer Purchase Prediction Using Machine Learning
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Purchase Behavior Prediction</title>
+</head>
+<body>
 
-Project Overview
-This project implements a supervised machine learning system to predict whether a customer will make a purchase based on behavioral data.
+<h1>Customer Purchase Behavior Prediction</h1>
 
-The objective is to analyze customer behavior patterns, compare multiple classification algorithms, and identify the most effective model for purchase prediction.
+<h2>Project Development Journal</h2>
 
-Dataset
-[Customer Purchase Behavior Dataset](https://www.kaggle.com/datasets/rabieelkharoua/predict-customer-purchase-behavior-dataset)
+<h3><code style="color:blue">Problem Statement</code></h3>
+<strong>This project aims to predict customer purchase behavior using machine learning. We perform data preprocessing, feature engineering, model training, and evaluation to build an accurate prediction system, accessible via a Streamlit web app.</strong>
 
-Features
-- Age  
-- Gender  
-- Annual Income  
-- Number of Purchases  
-- Product Category  
-- Time Spent on Website  
-- Loyalty Program Membership  
-- Discounts Availed  
+<h3><code style="color:blue">Dataset Description</code></h3>
+<strong>We are using the dataset from Kaggle: <a href="https://www.kaggle.com/datasets/rabieelkharoua/predict-customer-purchase-behavior-dataset">Predict Customer Purchase Behavior Dataset</a>. It contains customer features and purchase outcomes. The columns include:</strong>
+<ul>
+    <li><strong>CustomerID</strong>: Unique identifier for the customer.</li>
+    <li><strong>Age</strong>: Customer’s age.</li>
+    <li><strong>Gender</strong>: Customer’s gender.</li>
+    <li><strong>AnnualIncome</strong>: Customer’s annual income.</li>
+    <li><strong>SpendingScore</strong>: Customer’s spending score.</li>
+    <li><strong>PurchaseStatus</strong>: Target variable indicating whether the customer made a purchase (1) or not (0).</li>
+</ul>
 
-Target Variable
-- PurchaseStatus
-  - 0: No Purchase  
-  - 1: Purchase  
+<h3><code style="color:blue">Data Preprocessing</code></h3>
+<ul>
+    <li><strong>Handling Missing Values:</strong> Checked for NaNs and removed or imputed as necessary.</li>
+    <li><strong>Feature Scaling:</strong> Standardized numeric features using StandardScaler.</li>
+    <li><strong>Encoding:</strong> Categorical features like Gender were encoded to numeric values.</li>
+</ul>
 
-Machine Learning Workflow
+<h3><code style="color:blue">Exploratory Data Analysis (EDA)</code></h3>
+<p>We visualized the distribution of purchase behavior and relationships between features using countplots, heatmaps, and scatter plots.</p>
+<div align="center">
+    <img src="assets/eda_plot.png" height="300">
+</div>
 
-1. Data Loading and Exploration
-- Loaded the dataset using pandas
-- Inspected dataset structure, size, and data types
+<h3><code style="color:blue">Model Building</code></h3>
+<p>We trained several models including Logistic Regression, Decision Tree, K-Nearest Neighbors, and Random Forest. Hyperparameter tuning was performed for Random Forest using GridSearchCV.</p>
 
-2. Exploratory Data Analysis
-- Analyzed the distribution of purchase and non-purchase outcomes
-- Visualized correlations between numerical features
-- Identified potential patterns influencing purchase behavior
+<h3><code style="color:blue">Model Evaluation</code></h3>
+<p>The best performing model was selected based on accuracy, classification report, and confusion matrix. Random Forest provided the highest accuracy.</p>
 
-3. Data Preprocessing
-- Split data into training and testing sets (80/20)
-- Applied feature scaling using `StandardScaler`
+<h3><code style="color:blue">Model Deployment</code></h3>
+<p>The trained model was deployed via a Streamlit web app. Users can input customer features to predict purchase probability.</p>
+<p>Check out the deployed app: <a href="https://huggingface.co/spaces/nelbarman053/Customer-Purchase-Behavior-Prediction">here</a>.</p>
+<div align="center">
+    <img src="assets/streamlit_app.png" height="400">
+</div>
 
-4. Model Development
-The following classification models were implemented:
-- Logistic Regression
-- Decision Tree Classifier
-- Random Forest Classifier
-- K-Nearest Neighbors (KNN)
+<h3><code style="color:blue">Observations</code></h3>
+<ul>
+    <li>The model can successfully differentiate between likely purchasers and non-purchasers.</li>
+    <li>Features like AnnualIncome, Age, and SpendingScore were most impactful for predictions.</li>
+</ul>
 
-5. Model Evaluation
-Models were evaluated using:
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
-
-6. Feature Importance
-- Analyzed feature importance using the Random Forest model
-- Identified key predictors contributing to purchase decisions
-
-
-Results
-- Random Forest achieved the best overall performance
-- Annual Income, Time Spent on Website, and Number of Purchases were strong predictors of purchase behavior
-- Ensemble models outperformed individual classifiers on this dataset
-
-
-Technologies Used
-- Python
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- Scikit-learn
+</body>
+</html>
