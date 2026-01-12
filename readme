@@ -1,0 +1,80 @@
+# Customer Purchase Prediction Using Machine Learning
+
+## 📌 Project Overview
+This project builds a machine learning classification system to predict whether a customer will purchase a product or service based on demographic and behavioral data.
+
+The goal is to understand customer behavior patterns and evaluate multiple classification algorithms to identify the best-performing model.
+
+---
+
+## 📂 Dataset
+**Customer Purchase Behavior Dataset**
+
+Features:
+- Age
+- Gender
+- Annual Income
+- Number of Purchases
+- Product Category
+- Time Spent on Website
+- Loyalty Program
+- Discounts Availed
+
+Target Variable:
+- **PurchaseStatus** (0 = No Purchase, 1 = Purchase)
+
+---
+
+## 🧠 Machine Learning Workflow
+
+### 1. Data Loading & Understanding
+- Loaded dataset using pandas
+- Inspected structure, shape, and data types
+
+### 2. Exploratory Data Analysis (EDA)
+- Purchase vs No Purchase distribution
+- Correlation heatmap
+- Feature relationship analysis
+
+### 3. Data Preprocessing
+- Feature scaling using `StandardScaler`
+- Train-test split (80/20)
+
+### 4. Model Building
+Implemented and compared:
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- K-Nearest Neighbors (KNN)
+
+### 5. Model Evaluation
+Metrics used:
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+
+### 6. Feature Importance
+- Visualized feature importance using Random Forest
+
+---
+
+## 🏆 Results
+- Random Forest achieved the best overall performance
+- Features like **Annual Income**, **Time Spent on Website**, and **Number of Purchases** were strong predictors
+
+---
+
+## 🛠️ Technologies Used
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn
+
+---
+
+## 🚀 How to Run
+```bash
+pip install -r requirements.txt
+python src/main.py
