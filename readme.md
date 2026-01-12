@@ -8,7 +8,7 @@ The primary goal is to provide actionable insights into customer purchase behavi
 ---
 
 ## Dataset
-The dataset used in this project is available on Kaggle: [Customer Purchase Behavior Dataset]([https://www.kaggle.com/datasets/your-dataset-link](https://www.kaggle.com/datasets/rabieelkharoua/predict-customer-purchase-behavior-dataset))  
+The dataset used in this project is available on Kaggle: [Customer Purchase Behavior Dataset](https://www.kaggle.com/datasets/rabieelkharoua/predict-customer-purchase-behavior-dataset)  
 
 This dataset contains anonymized customer data and includes demographic and behavioral features for purchase prediction.
 
@@ -90,5 +90,5 @@ These insights can guide business decisions for targeted promotions and customer
 
 ---
 ## How to Access
-Visit the live Streamlit app at: [Customer-Purchase-Prediction]([https://share.streamlit.io/your-username/your-repo/main](https://customer-purchase-prediction-404.streamlit.app))
+Visit the live Streamlit app at: [Customer-Purchase-Prediction](https://customer-purchase-prediction-404.streamlit.app)
 
