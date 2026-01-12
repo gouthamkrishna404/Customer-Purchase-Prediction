@@ -1,80 +1,71 @@
-# Customer Purchase Prediction Using Machine Learning
+Customer Purchase Prediction Using Machine Learning
 
-## 📌 Project Overview
-This project builds a machine learning classification system to predict whether a customer will purchase a product or service based on demographic and behavioral data.
+Project Overview
+This project implements a supervised machine learning system to predict whether a customer will make a purchase based on demographic and behavioral data.
 
-The goal is to understand customer behavior patterns and evaluate multiple classification algorithms to identify the best-performing model.
+The objective is to analyze customer behavior patterns, compare multiple classification algorithms, and identify the most effective model for purchase prediction.
 
----
+Dataset
+Customer Purchase Behavior Dataset
 
-## 📂 Dataset
-**Customer Purchase Behavior Dataset**
+Features
+- Age  
+- Gender  
+- Annual Income  
+- Number of Purchases  
+- Product Category  
+- Time Spent on Website  
+- Loyalty Program Membership  
+- Discounts Availed  
 
-Features:
-- Age
-- Gender
-- Annual Income
-- Number of Purchases
-- Product Category
-- Time Spent on Website
-- Loyalty Program
-- Discounts Availed
+Target Variable
+- PurchaseStatus
+  - 0: No Purchase  
+  - 1: Purchase  
 
-Target Variable:
-- **PurchaseStatus** (0 = No Purchase, 1 = Purchase)
+Machine Learning Workflow
 
----
+1. Data Loading and Exploration
+- Loaded the dataset using pandas
+- Inspected dataset structure, size, and data types
 
-## 🧠 Machine Learning Workflow
+2. Exploratory Data Analysis
+- Analyzed the distribution of purchase and non-purchase outcomes
+- Visualized correlations between numerical features
+- Identified potential patterns influencing purchase behavior
 
-### 1. Data Loading & Understanding
-- Loaded dataset using pandas
-- Inspected structure, shape, and data types
+3. Data Preprocessing
+- Split data into training and testing sets (80/20)
+- Applied feature scaling using `StandardScaler`
 
-### 2. Exploratory Data Analysis (EDA)
-- Purchase vs No Purchase distribution
-- Correlation heatmap
-- Feature relationship analysis
-
-### 3. Data Preprocessing
-- Feature scaling using `StandardScaler`
-- Train-test split (80/20)
-
-### 4. Model Building
-Implemented and compared:
+4. Model Development
+The following classification models were implemented:
 - Logistic Regression
-- Decision Tree
-- Random Forest
+- Decision Tree Classifier
+- Random Forest Classifier
 - K-Nearest Neighbors (KNN)
 
-### 5. Model Evaluation
-Metrics used:
+5. Model Evaluation
+Models were evaluated using:
 - Accuracy
 - Precision
 - Recall
-- F1-Score
+- F1-score
 - Confusion Matrix
 
-### 6. Feature Importance
-- Visualized feature importance using Random Forest
+6. Feature Importance
+- Analyzed feature importance using the Random Forest model
+- Identified key predictors contributing to purchase decisions
 
----
 
-## 🏆 Results
+Results
 - Random Forest achieved the best overall performance
-- Features like **Annual Income**, **Time Spent on Website**, and **Number of Purchases** were strong predictors
+- Annual Income, Time Spent on Website, and Number of Purchases were strong predictors of purchase behavior
+- Ensemble models outperformed individual classifiers on this dataset
 
----
 
-## 🛠️ Technologies Used
+Technologies Used
 - Python
 - Pandas, NumPy
 - Matplotlib, Seaborn
 - Scikit-learn
-
----
-
-## 🚀 How to Run
-```bash
-pip install -r requirements.txt
-python src/main.py
