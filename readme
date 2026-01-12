@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Customer Purchase Behavior Prediction</title>
-</head>
-<body>
-
 <h1>Customer Purchase Behavior Prediction</h1>
 
 <h2>Project Development Journal</h2>
@@ -55,6 +47,3 @@
     <li>The model can successfully differentiate between likely purchasers and non-purchasers.</li>
     <li>Features like AnnualIncome, Age, and SpendingScore were most impactful for predictions.</li>
 </ul>
-
-</body>
-</html>
