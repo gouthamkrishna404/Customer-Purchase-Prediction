@@ -38,9 +38,9 @@ This dataset contains anonymized customer data and includes demographic and beha
 
 ### 2. Exploratory Data Analysis (EDA)
 - Visualized the distribution of purchase vs no purchase
-- ![Purchase Distribution](images/purchase_distribution.png)
+- ![Purchase Distribution](images/Figure_1.png)
 - Created correlation heatmaps to identify feature relationships
-- ![Feature Correlation](images/feature_correlation.png)
+- ![Feature Correlation](images/Figure_2.png)
 - Explored feature-to-feature interactions  
 
 ### 3. Data Preprocessing
