@@ -42,9 +42,6 @@ except:
         max_depth=None
     )
     model.fit(X_scaled, y)
-
-    joblib.dump(model, "models/best_model.pkl")
-    joblib.dump(scaler, "models/scaler.pkl")
     st.success("Model trained and saved.")
 
 # STEP 4: USER INPUT FOR PREDICTION
